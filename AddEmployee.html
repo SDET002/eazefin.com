@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Add Edit Employee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' 	rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="Admin.css">
+    <style>
+      input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+               -webkit-appearance: none;
+                margin: 0;
+        }
+
+        .ui-w-80 {
+            width: 80px !important;
+            height: auto;
+        }
+
+        
+        label.btn {
+            margin-bottom: 0;
+        }
+
+        .btn-outline-primary {
+            border-color: #26B4FF;
+            background: transparent;
+            color: #26B4FF;
+        }
+
+        .btn {
+            cursor: pointer;
+        }
+
+        .card {
+            background-clip: padding-box;
+            box-shadow: 0 1px 4px rgba(24, 28, 33, 0.012);
+            width: 60%;
+            margin: auto;
+        }
+
+        .row-bordered {
+            overflow: hidden;
+        }
+
+       
+        .light-style .account-settings-links .list-group-item {
+            padding: 0.85rem 1.5rem;
+            border-color: rgba(24, 28, 33, 0.03) !important;
+        }
+
+        .light-style .account-settings-links .list-group-item.active {
+            color: #4e5155 !important;
+        }
+
+        .material-style .account-settings-links .list-group-item {
+            padding: 0.85rem 1.5rem;
+            border-color: rgba(24, 28, 33, 0.03) !important;
+        }
+
+        .material-style .account-settings-links .list-group-item.active {
+            color: #4e5155 !important;
+        }
+
+        .dark-style .account-settings-links .list-group-item {
+            padding: 0.85rem 1.5rem;
+            border-color: rgba(255, 255, 255, 0.03) !important;
+        }
+
+        .dark-style .account-settings-links .list-group-item.active {
+            color: #fff !important;
+        }
+
+        .light-style .account-settings-links .list-group-item.active {
+            color: #4E5155 !important;
+        }
+
+        .light-style .account-settings-links .list-group-item {
+            padding: 0.85rem 1.5rem;
+            border-color: rgba(24, 28, 33, 0.03) !important;
+        }
+
+        .container {
+          top:-50px
+        }
+ 
+    </style>
+</head>
+
+<body style="background-color: #d4d5d6;">
+
+    
+<nav class="navbar navbar-light">
+
+  
+    <div class="mr-auto" href="#">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleSidePanel()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <!-- Navbar Items (Initially Empty) -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Menu items will be loaded dynamically here -->
+      </div>
+      <!-- End Navbar Items -->
+    
+      
+</nav>
+
+<div class="container-nav">
+  <a href="index.html" class="navbar-brand mx-auto">
+    <img src="main logo.png" width="30" height="30" class="d-inline-block align-top" alt="EazeFin Logo">
+    <span>EazeFin | </span>
+  </a>
+  <span class="mt-2 text-light">Welcome ABC Solutions</span>
+</div> 
+
+
+<div class="side-panel">
+  <ul class="navbar-nav">
+      
+      <li class="nav-item">
+          <a class="nav-link" href="AdminDashboard.html">
+            <i class="bx bxs-grid-alt"></i>
+					<span class="nav-item">Dashboard</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ViewEmployees.html">
+          <i class="bx bx-male-female"></i>
+					<span class="nav-item">View Employees</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="Analytics.html">
+        <i class="bx bxs-bar-chart-alt-2"></i>
+      <span class="nav-item">Analytics</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="SalesApproval.html">
+      <i class="bx bxs-check-square"></i>
+    <span class="nav-item">Sales Approval</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="Expenses.html">
+      <i class="bx bxs-coin-stack"></i>
+    <span class="nav-item">Expenses</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="SalesHistory.html">
+      <i class="bx bxs-receipt"></i>
+    <span class="nav-item">Sales History</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="TransactionHistory.html">
+      <i class="bx bxs-receipt"></i>
+    <span class="nav-item">Transaction History</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="AdminSettings.html">
+      <i class="bx bxs-cog"></i>
+    <span class="nav-item">Settings</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="index.html">
+      <i class="bx bx-log-out"></i>
+    <span class="nav-item">Logout</span></a>
+  </li>
+      <!-- Add more navigation items here -->
+  </ul>
+</div>
+
+
+    <!-- Add employee form starts here -->
+
+
+    <div class="container light-style flex-grow-1 container-p-y mb-4">
+        <h2 class="font-weight-bold text-center py-3 mb-2">
+            Add Employee
+        </h2>
+                        
+ <div class="card overflow-hidden">
+            <div class="row no-gutters row-bordered row-border-light">
+                <div class="col-md-12 pt-0">
+
+<form action="ViewEmployees.html"> 
+         
+<div  style ="text-align:center;">
+<label class="mt-4"><h3>Employee Details</h3></label>
+</div>
+                          
+                                
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label class="form-label">First Name<span class="text-danger">*</span> </label>
+                                    <input type="text" class="form-control mb-1" required>
+                                </div>
+
+                              <div class="form-group">
+                                    <label class="form-label">Middle Name<span class="text-danger"></span> </label>
+                                    <input type="text" class="form-control mb-1">
+                                </div>
+
+                                 <div class="form-group">
+                                    <label class="form-label">Last Name<span class="text-danger">*</span> </label>
+                                    <input type="text" class="form-control mb-1" required>
+                                </div>
+
+
+<div class="form-group">
+                                    <label class="form-label">Email<span class="text-danger">*</span> </label>
+                                    <input type="email" class="form-control mb-1" required>
+                                </div>
+<div class="form-group">
+                                    <label class="form-label">Date of Birth<span class="text-danger">*</span> </label>
+                                    <input type="date" class="form-control mb-1" required>
+                                </div>
+ 
+        <div class="form-group">
+                                    <label class="form-label">Password<span class="text-danger">*</span> </label>
+                                    <input type="password" class="form-control mb-1" required>
+                                </div>
+<div class="form-group">
+                                    <label class="form-label">Phone Number<span class="text-danger">*</span> </label>
+                                    <input type="number" class="form-control mb-1" required>
+                                </div>
+ <div class="form-group">
+                                    <label class="form-label">Secondary Phone Number<span class="text-danger"></span> </label>
+                                    <input type="number"  class="form-control mb-1">
+                                </div>
+<div class="form-group">
+                                    <label class="form-label">Age<span class="text-danger">*</span> </label>
+                                    <input type="number" class="form-control mb-1" required>
+                                </div>
+
+                 
+ <div class="form-group">
+                                    <label class="form-label">Aadhar Number<span class="text-danger">*</span> </label>
+                                    <input type="number" class="form-control mb-1" required>
+                                </div>
+ <div class="form-group">
+                                    <label class="form-label">Employee ID<span class="text-danger">*</span> </label>
+                                    <input type="text" class="form-control mb-1" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Address<span class="text-danger">*</span> </label>
+                                    <input type="textarea" class="form-control mb-1" required>
+                                </div>
+<div class="form-group">
+                                    <label class="form-label">City<span class="text-danger">*</span> </label>
+                                    <input type="text" class="form-control mb-1" required>
+                                </div>
+<div class="form-group">
+                                    <label class="form-label">State<span class="text-danger">*</span> </label>
+                                    <input type="text" class="form-control mb-1" required>
+                                </div>
+<div class="form-group">
+                                    <label class="form-label">Post Office<span class="text-danger">*</span> </label>
+                                    <input type="text" class="form-control mb-1" required>
+                                </div>
+
+ <div class="form-group">
+                                    <label class="form-label">District<span class="text-danger">*</span> </label>
+                                    <input type="text" class="form-control mb-1" required>
+                                </div>
+<div class="form-group">
+                                    <label class="form-label">Country<span class="text-danger">*</span> </label>
+                                    <input type="text" class="form-control mb-1" required>
+                                </div>
+<div class="form-group">
+                                    <label class="form-label">Zip Code<span class="text-danger">*</span> </label>
+                                    <input type="number" class="form-control mb-1" required>
+                                </div>
+ <div class="form-group">
+                                    <label class="form-label">Salary<span class="text-danger">*</span> </label>
+                                    <input type="number" class="form-control mb-1" required>
+                                </div>
+                       
+                                                                </div>
+                                <div class="text-center m-3">
+                                    <button type="Submit" class="btn btn-primary">Submit</button>&nbsp;
+                                 
+                                </div>
+                        </form>
+                        </div>
+                     
+                       
+                    </div>
+                </div>
+            </div>
+
+
+    
+<!--Footer-->
+<div class="footer-content">
+    <a>About Us</a><br>
+    <a>Privacy Policy</a><br>
+    <a>&copy; 2024 EazeFin<sup>&reg;</sup></a>
+</div>
+
+<script>
+    function toggleSidePanel() {
+            const sidePanel = document.querySelector('.side-panel');
+            sidePanel.classList.toggle('open');
+        }
+
+        
+    $(document).ready(function(){
+      // Load menu.html into the navbar
+      $('#navbarSupportedContent').load('navbar.html');
+    });
+  </script>
+  <!-- Bootstrap JS and dependencies (optional) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+   
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+     /* ------------admin dashbard---------------- */
+     
+      /* Custom CSS for the boxes */
+
+    .info-box {
+        background-color: #f8f9fa;
+        padding: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+        z-index:7;
+      }
+      .about-box,
+      .graph-box {
+        background-color: #f8f9fa;
+        padding: 40px;
+        margin-top: 40px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+        z-index:7;
+      }
+      .footer-content {
+          background-color: black;
+          color: aliceblue;
+          padding: 20px 0px;
+          text-align: center;
+          position: absolute;
+          width: 100%;
+          cursor: pointer;
+          z-index: 9;
+        }
+     
+        .footer-content a {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 16px;
+     
+        }
+  
+        .side-panel {
+              position: fixed;
+              bottom: 0px;
+              left: -300px; /* Initially hidden */
+              width: 200px;
+              height: 97vh; /* 100% of viewport height */
+              background-color: #7d6262;
+              transition: left 0.3s ease-in-out;
+              z-index:8;
+          }
+          .side-panel.open {
+              left: 0; /* Show the side panel */
+          }
+          .navbar-toggler{
+            z-index:10;
+            position: fixed;
+            background-color: rgb(220, 220, 220);
+          }
+  
+          .navbar-nav{
+            padding: 40px 20px;	
+            
+          }
+  
+          a.nav-link{
+            padding: 4px 0px !important;
+          }
+  
+  
+         .container-nav {
+          text-align: center;
+          background-color: #981515;
+          padding-bottom: 8px;
+          width: 100%;
+          margin: auto; 
+          position: fixed !important;
+          top: 0 !important;
+          z-index:9; 
+        }
+  
+        .container {
+          margin-top: 100px !important;
+          position: relative !important;
+          z-index:0 !important;
+        } 
+  
+      .nav-item a {
+          color: rgb(255, 255, 255);
+      }
+  
+      .nav-item a:hover {
+          color: #79c0f3;
+      }
+  
+      .navbar-brand {
+          color: #ffffff;
+          font-size: 24px;
+          font-weight: bolder;
+      }
+  
+      .navbar-brand:hover {
+          color:#79c0f3;
+      }
+      
+      .row {
+          width: 100%;
+      }
+ 
+       

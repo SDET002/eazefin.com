@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+
+    <title>Analytics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' 	rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="Admin.css">
+    <style>
+  
+
+        .ui-w-80 {
+            width: 80px !important;
+            height: auto;
+        }
+
+        /* .text-light {
+            color: #babbbc !important;
+        } */
+
+        .card {
+            background-clip: padding-box;
+            box-shadow: 0 1px 4px rgba(24, 28, 33, 0.012);
+        }
+        .card-body{
+            align-items: center;
+         }
+	.company-performance-graph,
+.employee-performance-graph {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    align-items: center;
+}
+.image-below-company-graph {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; /* adjust as needed */
+}
+
+
+        .row-bordered {
+            overflow: hidden;
+        }
+
+        .analytics .container {
+          margin-bottom: 10px;
+          top: -50px;
+        }
+</style>
+</head>
+
+<body style="background-color: #d4d5d6;">
+
+    <!-- nav -->
+
+    
+<nav class="navbar navbar-light">
+
+  
+    <div class="mr-auto" href="#">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleSidePanel()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <!-- Navbar Items (Initially Empty) -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Menu items will be loaded dynamically here -->
+      </div>
+      <!-- End Navbar Items -->
+    
+      
+</nav>
+
+<div class="container-nav">
+  <a href="index.html" class="navbar-brand mx-auto">
+    <img src="main logo.png" width="30" height="30" class="d-inline-block align-top" alt="EazeFin Logo">
+    <span>EazeFin | </span>
+  </a>
+  <span class="mt-2 text-light">Welcome ABC Solutions</span>
+</div> 
+
+
+<div class="side-panel">
+  <ul class="navbar-nav">
+      
+      <li class="nav-item">
+          <a class="nav-link" href="AdminDashboard.html">
+            <i class="bx bxs-grid-alt"></i>
+					<span class="nav-item">Dashboard</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ViewEmployees.html">
+          <i class="bx bx-male-female"></i>
+					<span class="nav-item">View Employees</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="Analytics.html">
+        <i class="bx bxs-bar-chart-alt-2"></i>
+      <span class="nav-item">Analytics</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="SalesApproval.html">
+      <i class="bx bxs-check-square"></i>
+    <span class="nav-item">Sales Approval</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="Expenses.html">
+      <i class="bx bxs-coin-stack"></i>
+    <span class="nav-item">Expenses</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="SalesHistory.html">
+      <i class="bx bxs-receipt"></i>
+    <span class="nav-item">Sales History</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="TransactionHistory.html">
+      <i class="bx bxs-receipt"></i>
+    <span class="nav-item">Transaction History</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="AdminSettings.html">
+      <i class="bx bxs-cog"></i>
+    <span class="nav-item">Settings</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="index.html">
+      <i class="bx bx-log-out"></i>
+    <span class="nav-item">Logout</span></a>
+  </li>
+      <!-- Add more navigation items here -->
+  </ul>
+</div>
+
+    <!---------------------analytics-------------------->
+    <div class="analytics">
+     <div class="container light-style flex-grow-1 container-p-y">
+        <h1 class="font-weight-bold text-center py-3 mb-4">Analytics</h1>
+       
+        <div class = "card">        
+            <div class="card-body">
+                <div class="performance-graphs">
+                    <div class="company-performance-graph">
+                        <h3>Company Performance Graph</h3>
+                    </div><br>
+
+                      <img src="https://i0.wp.com/www.salesforceblogger.com/wp-content/uploads/2023/02/image-3-1.png?resize=1200%2C727&ssl=1" alt="Company Performance Graph" class="image-below-company-graph">
+                <!-- Add your graph or chart here --><br><br>	
+	                  <div class="employee-performance-graph">
+                       <h3>Employee Performance Graph</h3>
+                    </div><br>
+	                    <img src="https://exceljet.net/sites/default/files/styles/original_with_watermark/public/images/charttypes/pareto%20chart.png" alt="Employee Performance Graph" class="image-below-company-graph">
+                               <!-- Add your graph or chart here --><br>
+                </div>                                        
+           </div>                              
+       </div>
+       </div>
+       </div>
+   
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Bootstrap JS and dependencies (optional) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!--Footer-->
+<div class="footer-content">
+    <a>About Us</a><br>
+    <a>Privacy Policy</a><br>
+    <a>&copy; 2024 EazeFin<sup>&reg;</sup></a>
+</div>
+
+<script>
+    function toggleSidePanel() {
+            const sidePanel = document.querySelector('.side-panel');
+            sidePanel.classList.toggle('open');
+        }
+
+        
+    $(document).ready(function(){
+      // Load menu.html into the navbar
+      $('#navbarSupportedContent').load('navbar.html');
+    });
+  </script>
+
+</body>
+</html>

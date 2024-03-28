@@ -1,0 +1,49 @@
+body {
+  background-color: rgb(192, 192, 192);
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.card {
+  background-color: rgb(255, 255, 255);
+  margin: 10px;
+}
+
+.card-title, .card-text {
+  text-align: center;
+}
+
+img {
+  width: auto;
+  height: auto;
+}
+
+.table td, .table th {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+/* .tab {
+  margin: 2px;
+  padding: 5px;
+  width: 80%;
+  background-color: rgb(255, 255, 255);
+}
+
+.tab-approved {
+  margin: 2px;
+  padding: 5px;
+  width: 80%;
+  background-color: rgb(0, 255, 0);
+  color: rgb(255, 255, 255);
+}
+
+.tab-rejected {
+  margin: 2px;
+  padding: 5px;
+  width: 80%;
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+} */
