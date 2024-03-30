@@ -1,67 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="eazefin.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <title>Registration</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>EazeFin - Company Registration</title>
+    <link rel="icon" href="./main logo.png">
 </head>
+
 <body style="background-color: #d4d5d6;">
 
 
-     <!--Navbar-->
+    <!--Navbar-->
 
 
     <!--Toggle Navbar for small devices-->
 
     <div class="pos-f-t">
         <nav class="navbar navbar-dark bg-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="togglebar-logo">
-               <a href="index.html"><h3>EazeFin <img src="main logo.png" width="30" height="30"></h3></a>
-              </div>
-          </nav>
-          
+                <a href="index.html">
+                    <h3>EazeFin <img src="main logo.png" width="30" height="30"></h3>
+                </a>
+            </div>
+        </nav>
+
         <div class="collapse" id="navbarToggleExternalContent">
-          <div class="bg-dark p-4">
-            <li class="text-white"><a id="tl"><i class="bi bi-box-arrow-in-right"></i> Sign-In</a></li>
-            <li class="text-white"><a id="tl"><i class="bi bi-building-fill-add"></i> Company Registration</a></li>
-            <li class="text-white"><a id="tl"><i class="bi bi-question-square-fill"></i> HelpDesk</a></li>
-            
-          </div>
+            <div class="bg-dark p-4">
+                <li class="text-white"><a href="Login.html" id="tl"><i class="bi bi-box-arrow-in-right"></i> Sign-In</a>
+                </li>
+                <li class="text-white"><a href="index.html" id="tl"><i class="bi bi-building-fill-add"></i> Company
+                        Registration</a></li>
+                <li class="text-white"><a href="Helpdesk.html" id="tl"><i class="bi bi-question-square-fill"></i>
+                        HelpDesk</a></li>
+
+            </div>
         </div>
-        
-      </div>
 
-      
+    </div>
 
-      <!--Navbar for desktops-->
+
+
+    <!--Navbar for desktops-->
     <div class="nav-bar">
-    <div class="logo">
-        <a href="index.html"><img src="main logo.png">
-         EazeFin 
-        </a>
+        <div class="logo">
+            <a href="index.html"><img src="main logo.png">
+                EazeFin
+            </a>
+
+        </div>
+
+        <div class="nav-contents">
+
+            <ol class="nav-ol">
+                <a href="Login.html"><i class="bi bi-box-arrow-in-right"></i> Sign-In</a>
+                <a href="index.html"><i class="bi bi-building-fill-add"></i> Company Registration</a>
+                <a href="Helpdesk.html"><i class="bi bi-question-square-fill"></i> Help Desk</a>
+            </ol>
+        </div>
 
     </div>
-    
-    <div class="nav-contents">
-        
-    <ol class="nav-ol">
-        <a href="Login.html"><i class="bi bi-box-arrow-in-right"></i> Sign-In</a>
-        <a href="Companyregistration.html"><i class="bi bi-building-fill-add"></i> Company Registration</a>
-        <a href="Helpdesk.html"><i class="bi bi-question-square-fill"></i> Help Desk</a>
-    </ol>
-    </div>
-
-</div>
 
 
     <!-- form starts here -->
@@ -70,403 +78,605 @@
         <!-- Author: FormBold Team -->
         <!-- Learn More: https://formbold.com -->
         <div class="formbold-form-wrapper">
-          <form action="Login.html" method="POST">
-              <div class="formbold-steps">
-                  <ul>
-                      <li class="formbold-step-menu1 active">
-                          <span>1</span>
-                          Sign Up
-                      </li>
-                      <li class="formbold-step-menu2">
-                          <span>2</span>
-                          Description
-                      </li>
-                      <li class="formbold-step-menu3">
-                          <span>3</span>
-                          Register
-                      </li>
-                  </ul>
-              </div>
-     
-              <div class="formbold-form-step-1 active">
-                <div class="formbold-input-flex">
-                  <div>
-                      <label for="username" class="formbold-form-label"> *Company name </label>
-                      <input
-                      type="text"
-                      name="username"
-                      placeholder="Andrio"
-                      id="username"
-                      class="formbold-form-input"
-                      />
-                      <div class="error"></div>
-                  </div>
-                  <div>
-                      <label for="ownerName" class="formbold-form-label"> *Owner name </label>
-                      <input
-                      type="text"
-                      name="ownerName"
-                      placeholder="Dolee"
-                      id="ownerName"
-                      class="formbold-form-input"
-                      />
-                      <div class="error"></div>
-                  </div>
-                </div>
-       
-                <div class="formbold-input-flex">
+            <h3 style="text-align: center; padding-bottom: 20px; font-weight: bolder;"> Registration Form </h3>
+            <form action="Login.html" id="registrationForm">
+
+                <div class="formbold-form-step-1 active">
+                    <div class="formbold-input-flex">
+                        <div>
+                            <label for="companyName" class="formbold-form-label font-weight-bold">
+                                <span class="text-danger">*</span> Company name </label>
+                            <input type="text" name="companyName" placeholder="Company Name" id="companyName"
+                                class="formbold-form-input" onkeypress="validateCompanyName(this)" autocomplete="off"
+                                required />
+                            <span id="companyNameError"></span>
+                        </div>
+                        <div>
+                            <label for="ownerName" class="formbold-form-label font-weight-bold">
+                                <span class="text-danger">*</span> Owner name </label>
+                            <input type="text" name="ownerName" placeholder="Full Name" id="ownerName"
+                                class="formbold-form-input" onkeypress="ownerNameValidation(this)" autocomplete="off"
+                                required />
+                            <span id="ownerNameError"></span>
+                        </div>
+                    </div>
+
+                    <div class="formbold-input-flex">
+                        <div>
+                            <label for="phone" class="formbold-form-label font-weight-bold">
+                                <span class="text-danger">*</span> Phone </label>
+                            <input type="text" name="phone" placeholder="Enter 10 digit Phone Number" id="phone"
+                                class="formbold-form-input" onkeypress="phoneValidation(this)" autocomplete="off"
+                                required />
+                            <span id="phoneError"></span>
+                        </div>
+                        <div>
+                            <label for="email" class="formbold-form-label font-weight-bold">
+                                <span class="text-danger">*</span> Email </label>
+                            <input type="email" name="email" placeholder="example@mail.com" id="email"
+                                class="formbold-form-input" onkeypress="emailValidation(this)" autocomplete="off"
+                                required />
+                            <span id="emailError"></span>
+                        </div>
+                    </div>
+
+                    <div class="formbold-input-flex">
+                        <div>
+                            <label for="password" class="formbold-form-label font-weight-bold">
+                                <span class="text-danger">*</span> Password </label>
+                            <input type="password" name="password" placeholder="Enter Password here" id="password"
+                                class="formbold-form-input" onkeyup="passwordValidation(this)" autocomplete="off"
+                                required />
+                            <span id="pass1"></span>
+                        </div>
+                        <div>
+                            <label for="password2" class="formbold-form-label font-weight-bold">
+                                <span class="text-danger">*</span> Confirm Password </label>
+                            <input type="password" name="cpassword" placeholder="Re-Type Password" id="cpassword"
+                                class="formbold-form-input" onkeyup="cpasswordValidation(this)"
+                                oninput="cpasswordValidation(this)" autocomplete="off" required />
+                            <span id="pass2"></span>
+                        </div>
+                    </div>
+
+
                     <div>
-                      <label for="phone" class="formbold-form-label"> *Phone </label>
-                      <input
-                      type="text"
-                      name="phone"
-                     
-                      id="phone"
-                      class="formbold-form-input"
-                      />
-                      <div class="error"></div>
+                        <label for="gst" class="formbold-form-label font-weight-bold">
+                            <span class="text-danger">*</span> GST No </label>
+                        <input type="text" name="gst" id="gst" placeholder="00ABCDE0000F0Z0" class="formbold-form-input"
+                            onkeypress="gstValidation(this)" autocomplete="off" required />
+                        <span id="gstError"></span>
+                    </div>
+                    <br>
+
+                    <div>
+                        <label for="address" class="formbold-form-label font-weight-bold">
+                            <span class="text-danger">*</span> Address </label>
+                        <input type="text" name="address" id="address" placeholder="Address Line 1"
+                            class="formbold-form-input" onkeypress="addressValidation(this)" autocomplete="off"
+                            required />
+                        <span id="addressError"></span>
+                    </div>
+                    <br>
+
+                    <div class="formbold-input-flex">
+                        <div>
+                            <label for="country" class="formbold-form-label font-weight-bold">
+                                <span class="text-danger">*</span> Country
+                            </label>
+                            <select id="country" name="country" class="formbold-form-input" required>
+                                <option value="">Select a country</option>
+                                <option value="India" selected>India</option>
+                                <option value="USA">USA</option>
+                                <option value="Australia">Australia</option>
+                                <option value="UK">UK</option>
+                                <option value="Canada">Canada</option>
+                                <option value="China">China</option>
+                                <option value="Sri Lanka">Sri Lanka</option>
+                                <option value="Afganistan">Afganistan</option>
+                                <option value="Germany">Germany</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="state" class="formbold-form-label font-weight-bold">
+                                <span class="text-danger">*</span> State
+                            </label>
+                            <select id="state" name="state" class="formbold-form-input" required>
+                                <option value="">Select your State</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Tamil Nadu" selected>Tamil Nadu</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Telengana">Telengana</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="formbold-input-flex">
+
+                        <div>
+                            <label for="city" class="formbold-form-label font-weight-bold">
+                                <span class="text-danger">*</span> City
+                            </label>
+                            <select id="city" name="city" class="formbold-form-input" required>
+                                <option value="">Select your City</option>
+                                <option value="Coimabatore">Coimabatore</option>
+                                <option value="Chennai" selected>Chennai</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="district" class="formbold-form-label font-weight-bold">
+                                <span class="text-danger">*</span> District
+                            </label>
+                            <select id="district" name="district" class="formbold-form-input" required>
+                                <option value="">Select your District</option>
+                                <option value="Coimabatore North" selected>Coimabatore North</option>
+                                <option value="Coimabatore South">Coimabatore South</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="formbold-input-flex">
+
+                        <div>
+                            <label for="postoffice" class="formbold-form-label font-weight-bold">
+                                <span class="text-danger">*</span> Post Office
+                            </label>
+                            <input type="text" name="postoffice" placeholder="Post Office Name" id="postoffice"
+                                class="formbold-form-input" onkeypress="postOfficeValidation(this)" autocomplete="off"
+                                required />
+                            <span id="postofficeError"></span>
+                        </div>
+
+                        <div>
+                            <label for="zipcode" class="formbold-form-label font-weight-bold">
+                                <span class="text-danger">*</span> Zip Code
+                            </label>
+                            <input type="text" name="zipcode" placeholder="Pincode / Zipcode" id="zipcode"
+                                class="formbold-form-input" onkeypress="zipcodeValidation(this)" autocomplete="off"
+                                required />
+                            <span id="zipcodeError"></span>
+                        </div>
                     </div>
                     <div>
-                        <label for="email" class="formbold-form-label"> *Email </label>
-                        <input
-                        type="email"
-                        name="email"
-                        placeholder="example@mail.com"
-                        id="email"
-                        class="formbold-form-input"
-                        />
-                        <div class="error"></div>
+                        <label for="description" class="formbold-form-label font-weight-bold">
+                            <span class="text-danger">*</span> Description
+                        </label>
+                        <textarea rows="6" name="description" id="description"
+                            placeholder="Enter the description/tag line of your Company" class="formbold-form-input"
+                            onkeypress="descriptionValidation(this)" autocomplete="off" required></textarea>
+                        <span id="descriptionError"></span>
                     </div>
+
                 </div>
-                <div class="formbold-input-flex">
-                  <div>
-                    <label for="password" class="formbold-form-label"> *Password </label>
-                    <input
-                    type="password"
-                    name="password"
-                   
-                    id="password"
-                    class="formbold-form-input"
-                    />
-                    <div class="error"></div>
-                  </div>
-                  <div>
-                      <label for="password2" class="formbold-form-label"> *Confirm Password </label>
-                      <input
-                      type="password"
-                      name="password2"
-                     
-                      id="password2"
-                      class="formbold-form-input"
-                      />
-                      <div class="error"></div>
-                  </div>
-              </div>
+
+                <br>
                 <div>
-                    <label for="gst" class="formbold-form-label"> *GST No </label>
-                    <input
-                    type="text"
-                      name="gst"
-                      id="gst"
-                     
-                      class="formbold-form-input"
-                      />
-                      <div class="error"></div>
-                </div>
-       
-                <div>
-                    <label for="address" class="formbold-form-label"> Address </label>
-                    <input
-                    type="text"
-                    name="address"
-                    id="address"
-                    placeholder="Flat 4, 24 Castle Street, Perth, PH1 3JY"
-                    class="formbold-form-input"
-                    />
-                    <div class="error"></div>
-                </div>
-              </div>
-     
-              <div class="formbold-form-step-2">
-                <div>
-                  <label for="description" class="formbold-form-label"> Description </label>
-                  <textarea
-                    rows="6"
-                    name="description"
-                    id="description"
-                    placeholder="Enter the description of your Company"
-                    class="formbold-form-input"
-                  ></textarea>
-                  <div class="error"></div>
-                </div>
-              </div>
-     
-              <div class="formbold-form-step-3">
-                <div class="formbold-form-confirm">
-                  <p>
-                    Click on "Register Your Company" to complete the registration process or click on 'back' to restart the registration.
-                  </p>
-     
-                  <!-- <div>
-                    <button class="formbold-confirm-btn active">
-                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="11" cy="11" r="10.5" fill="white" stroke="#DDE3EC"/>
-                      <g clip-path="url(#clip0_1667_1314)">
-                      <path d="M9.83343 12.8509L15.1954 7.48828L16.0208 8.31311L9.83343 14.5005L6.12109 10.7882L6.94593 9.96336L9.83343 12.8509Z" fill="#536387"/>
-                      </g>
-                      <defs>
-                      <clipPath id="clip0_1667_1314">
-                      <rect width="14" height="14" fill="white" transform="translate(4 4)"/>
-                      </clipPath>
-                      </defs>
-                      </svg>
-                      Yes! I want it.
+                    <button type="submit" name="submit" id="submit" class="btn btn-success"
+                        onclick="(function(event) { event.preventDefault(); var ask = window.confirm('Please review your details before final submission!'); if (ask) { window.alert('Congratulations! Welcome to EazeFin. You can login now'); window.location.href = 'Login.html'; } })(event)"
+                        disabled>
+                        Register Now!
                     </button>
-     
-                    <button class="formbold-confirm-btn">
-                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="11" cy="11" r="10.5" fill="white" stroke="#DDE3EC"/>
-                      <g clip-path="url(#clip0_1667_1314)">
-                      <path d="M9.83343 12.8509L15.1954 7.48828L16.0208 8.31311L9.83343 14.5005L6.12109 10.7882L6.94593 9.96336L9.83343 12.8509Z" fill="#536387"/>
-                      </g>
-                      <defs>
-                      <clipPath id="clip0_1667_1314">
-                      <rect width="14" height="14" fill="white" transform="translate(4 4)"/>
-                      </clipPath>
-                      </defs>
-                      </svg>
-                      No! I don’t want it.
-                    </button>
-                  </div> -->
                 </div>
-              </div>
-     
-              <div class="formbold-form-btn-wrapper">
-                <button class="formbold-back-btn">
-                  Back
-                </button>
-     
-                <button class="formbold-btn">
-                    Next Step
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_1675_1807)">
-                    <path d="M10.7814 7.33312L7.20541 3.75712L8.14808 2.81445L13.3334 7.99979L8.14808 13.1851L7.20541 12.2425L10.7814 8.66645H2.66675V7.33312H10.7814Z" fill="white"/>
-                    </g>
-                    <defs>
-                    <clipPath id="clip0_1675_1807">
-                    <rect width="16" height="16" fill="white"/>
-                    </clipPath>
-                    </defs>
-                    </svg>
-                </button>
-              </div>
-          </form>
+
+            </form>
         </div>
-      </div>
+    </div>
 
-      
-<!--Footer-->
-<div class="footer-content">
-    <a>About Us</a><br>
-    <a>Privacy Policy</a><br>
-    <a>&copy; 2024 EazeFin<sup>&reg;</sup></a>
-</div>
 
-    
+    <!--Footer-->
+    <div class="footer-content">
+        <a>About Us</a><br>
+        <a>Privacy Policy</a><br>
+        <a>&copy; 2024 EazeFin<sup>&reg;</sup></a>
+    </div>
+
 </body>
 
+</html>
+
 <script>
-    const username = document.getElementById('username');
-    const phone = document.getElementById('phone');
-    const gst = document.getElementById('gst');
-    const ownerName = document.getElementById('ownerName');
-    const email = document.getElementById('email');
-    const password = document.getElementById('password');
-    const password2 = document.getElementById('password2');
-    const stepMenuOne = document.querySelector('.formbold-step-menu1');
-    const stepMenuTwo = document.querySelector('.formbold-step-menu2');
-    const stepMenuThree = document.querySelector('.formbold-step-menu3');
-    const stepOne = document.querySelector('.formbold-form-step-1');
-    const stepTwo = document.querySelector('.formbold-form-step-2');
-    const stepThree = document.querySelector('.formbold-form-step-3');
-    const formSubmitBtn = document.querySelector('.formbold-btn');
-    const formBackBtn = document.querySelector('.formbold-back-btn');
- 
-    formSubmitBtn.addEventListener("click", function(event) {
-        event.preventDefault();
-        if (stepMenuOne.classList.contains('active')) {
-            validateStepOne();
-        } else if (stepMenuTwo.classList.contains('active')) {
-            validateStepTwo();
-        } else if (stepMenuThree.classList.contains('active')) {
-            // You can handle validation for step three if needed
-            alert("Are you sure?");
-            window.location.href="Login.html";
-        }
-    });
- 
-    formBackBtn.addEventListener("click", function(event) {
-        event.preventDefault();
-        if (stepMenuTwo.classList.contains('active')) {
-            stepMenuTwo.classList.remove('active');
-            stepMenuOne.classList.add('active');
-            stepTwo.classList.remove('active');
-            stepOne.classList.add('active');
-        } else if (stepMenuThree.classList.contains('active')) {
-            stepMenuThree.classList.remove('active');
-            stepMenuTwo.classList.add('active');
-            stepThree.classList.remove('active');
-            stepTwo.classList.add('active');
-            formSubmitBtn.textContent = 'Next Step';
- 
-        }
-    });
- 
-    const setError = (element, message) => {
-        const inputControl = element.parentElement;
-        const errorDisplay = inputControl.querySelector('.error');
-        errorDisplay.innerText = message;
-        inputControl.classList.add('error');
-        inputControl.classList.remove('success');
-    };
- 
-    const setSuccess = element => {
-        const inputControl = element.parentElement;
-        const errorDisplay = inputControl.querySelector('.error');
-        errorDisplay.innerText = '';
-        inputControl.classList.add('success');
-        inputControl.classList.remove('error');
-    };
- 
-    const isValidEmail = email => {
-        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(String(email).toLowerCase());
-    };
- 
-    const validateStepOne = () => {
-        const usernameValue = username.value.trim();
-        const emailValue = email.value.trim();
-        const passwordValue = password.value.trim();
-        const password2Value = password2.value.trim();
-        const ownerValue = ownerName.value.trim();
-        const phoneValue = phone.value.trim();
-        const gstValue = gst.value.trim();
-        const addressValue = address.value.trim();
-        
- 
-        let valid = true;
- 
-        // Validation logic for step one fields
-        // ...
-        if (usernameValue === '') {
-            setError(username, 'Company Name is required');
-            valid = false;
-        } else {
-            setSuccess(username);
-        }
- 
-        if (phoneValue === '') {
-            setError(phone, 'Phone Number is required');
-            valid = false;
-        } else if (!/^\d{10}$/.test(phoneValue)) {
-            setError(phone, 'Please enter a valid 10-digit phone number');
-            valid = false;
-        } else {
-            setSuccess(phone);
-        }
- 
-        if (gstValue === '') {
-            setError(gst, 'GST Number is required');
-            valid = false;
-        } else if (!/^\d{2}[A-Z]{5}\d{4}[A-Z0-9]{4}$/.test(gstValue)) {
-            setError(gst, 'Invalid GST No. entered');
-            valid = false;
-        } else {
-            setSuccess(gst);
-        }
- 
-        if (ownerValue === '' || ownerValue.length < 3 || ownerValue.length > 50) {
-            setError(ownerName, 'Owner Name must be between 3 and 50 characters');
-            valid = false;
-        } else {
-            setSuccess(ownerName);
-        }
- 
-        if (emailValue === '') {
-            setError(email, 'Email is required');
-            valid = false;
-        } else if (!isValidEmail(emailValue)) {
-            setError(email, 'Provide a valid email address');
-            valid = false;
-        } else {
-            setSuccess(email);
-        }
- 
-        if (passwordValue === '') {
-            setError(password, 'Password is required');
-            valid = false;
-        } else if (passwordValue.length < 8) {
-            setError(password, 'Password must be at least 8 characters.');
-            valid = false;
-        } else if (!/[A-Z]/.test(passwordValue) || !/\d/.test(passwordValue) || !/[!@#$%^&*]/.test(passwordValue)) {
-            setError(password, 'Password must contain at least one uppercase letter, one digit, and one special character');
-            valid = false;
-        } else {
-            setSuccess(password);
-        }
- 
-        if (password2Value === '') {
-            setError(password2, 'Please confirm your password');
-            valid = false;
-        } else if (password2Value !== passwordValue) {
-            setError(password2, 'Passwords do not match');
-            valid = false;
-        } else {
-            setSuccess(password2);
-        }
-        if (addressValue === '') {
-            setError(address, 'Address is required');
-            valid = false;
+
+    function ownerNameValidation(inputTxt) {
+        var regx = /^[a-zA-Z]+$/;
+        var textField = document.getElementById("ownerNameError");
+        var inputField = document.getElementById("ownerName");
+
+        if (inputTxt.value != '') {
+            if (inputTxt.value.length >= 2) {
+                if (inputTxt.value.match(regx)) {
+                    textField.textContent = '';
+                    textField.style.color = "green";
+                    inputField.style.color = "green";
+                    document.getElementById("submit").disabled = false;
+                } else {
+                    textField.textContent = 'only characters allowed';
+                    textField.style.color = "red";
+                    inputField.style.color = "red";
+                    document.getElementById("submit").disabled = true;
+                }
+            }
+            else {
+                textField.textContent = 'your input must be more than two chracters';
+                textField.style.color = "red";
+                inputField.style.color = "red";
+                document.getElementById("submit").disabled = true;
+            }
         }
         else {
-            setSuccess(address);
+            textField.textContent = 'your input must be more than two chracters';
+            textField.style.color = "red";
+            inputField.style.color = "red";
+            document.getElementById("submit").disabled = true;
         }
- 
-        if (valid) {
-            stepMenuOne.classList.remove('active');
-            stepMenuTwo.classList.add('active');
-            stepOne.classList.remove('active');
-            stepTwo.classList.add('active');
-            formBackBtn.classList.add('active');
+    }
+
+    function validateCompanyName(inputTxt) {
+        var regx = /^[a-zA-Z]+$/;
+        var textField = document.getElementById("companyNameError");
+        var inputField = document.getElementById("companyName");
+
+        if (inputTxt.value != '') {
+            if (inputTxt.value.length >= 2) {
+                if (inputTxt.value.match(regx)) {
+                    textField.textContent = '';
+                    textField.style.color = "green";
+                    inputField.style.color = "green";
+                    document.getElementById("submit").disabled = false;
+                } else {
+                    textField.textContent = 'only characters allowded';
+                    textField.style.color = "red";
+                    inputField.style.color = "red";
+                    document.getElementById("submit").disabled = true;
+                }
+            }
+            else {
+                textField.textContent = 'your input must be more than two chracters';
+                textField.style.color = "red";
+                inputField.style.color = "red";
+                document.getElementById("submit").disabled = true;
+            }
         }
-    };
- 
-    const validateStepTwo = () => {
-        let valid=true
-         description = document.getElementById('description');
- 
-        // You can include validation logic for step two fields here
-        // For example:
-        const descriptionValue = description.value.trim();
-        if (descriptionValue === '') {
-            setError(description, 'Description is required');
-            valid = false;
+        else {
+            textField.textContent = 'your input must be more than two chracters';
+            textField.style.color = "red";
+            inputField.style.color = "red";
+            document.getElementById("submit").disabled = true;
+        }
+    }
+
+    function phoneValidation(inputTxt) {
+        const regx = /^[6-9]\d{8}$/;
+        const textField = document.getElementById("phoneError");
+        const inputField = document.getElementById("phone");
+
+        if (inputTxt.value.trim() === '') {
+            textField.textContent = '* Phone number is not valid!';
+            textField.style.color = "red";
+            inputField.style.color = "red";
+            document.getElementById("submit").disabled = true;
+        } else if (regx.test(inputTxt.value)) {
+            textField.textContent = '';
+            textField.style.color = "green";
+            inputField.style.color = "green";
+            document.getElementById("submit").disabled = false;
         } else {
-            setSuccess(description);
+            textField.textContent = '* Phone number is not valid!';
+            textField.style.color = "red";
+            inputField.style.color = "red";
+            document.getElementById("submit").disabled = true;
         }
- 
-        // Placeholder validation logic for step two
-        // Remove this block once you implement actual validation
-        // const valid = true;
- 
-        if (valid) {
-            stepMenuTwo.classList.remove('active');
-            stepMenuThree.classList.add('active');
-            stepTwo.classList.remove('active');
-            stepThree.classList.add('active');
-            formBackBtn.classList.add('active');
-            formSubmitBtn.textContent = 'Register Your Company';
+    }
+
+    function emailValidation(inputTxt) {
+        var regx = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+        var textField = document.getElementById("emailError");
+        var inputField = document.getElementById("email");
+
+        if (inputTxt.value != '') {
+            if (inputTxt.value.match(regx)) {
+                textField.textContent = '';
+                textField.style.color = "green";
+                inputField.style.color = "green";
+                document.getElementById("submit").disabled = false;
+            }
+            else {
+                textField.textContent = '* email is not valid!!!';
+                textField.style.color = "red";
+                inputField.style.color = "red";
+                document.getElementById("submit").disabled = true;
+            }
         }
-    };
+        else {
+            textField.textContent = '* email is not valid';
+            textField.style.color = "red";
+            inputField.style.color = "red";
+            document.getElementById("submit").disabled = true;
+        }
+    }
+
+
+
+    function passwordValidation(inputTxt) {
+        var regx = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}/;
+        var textField = document.getElementById("pass1");
+        var inputField = document.getElementById("password");
+
+        if (inputTxt.value != '') {
+            if (inputTxt.value.match(regx)) {
+                textField.textContent = '';
+                textField.style.color = "green";
+                inputField.style.color = "green";
+                document.getElementById("submit").disabled = false;
+            }
+            else {
+                textField.textContent = '* Must contain at least one number and one uppercase and lowercase letter and aleast 5 characters';
+                textField.style.color = "red";
+                inputField.style.color = "red";
+                document.getElementById("submit").disabled = true;
+            }
+        }
+        else {
+            textField.textContent = '* Must contain at least one number and one uppercase and lowercase letter and aleast 5 characters';
+            textField.style.color = "red";
+            inputField.style.color = "red";
+            document.getElementById("submit").disabled = true;
+        }
+    }
+
+    function cpasswordValidation(inputTxt) {
+        var password = document.getElementById("password").value;
+        var cpassword = document.getElementById("cpassword").value;
+        var textField = document.getElementById("pass2");
+        var inputField = document.getElementById("cpassword");
+
+        if (cpassword != '') {
+            if (password == cpassword) {
+                textField.textContent = '';
+                textField.style.color = "green";
+                inputField.style.color = "green";
+                document.getElementById("submit").disabled = false;
+            }
+            else {
+                textField.textContent = '* not match';
+                textField.style.color = "red";
+                inputField.style.color = "red";
+                document.getElementById("submit").disabled = true;
+            }
+        }
+        else {
+            textField.textContent = '* missing';
+            textField.style.color = "red";
+            inputField.style.color = "red";
+            document.getElementById("submit").disabled = true;
+        }
+    }
+
+    function gstValidation(inputTxt) {
+        const regx = /^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z][1-9A-Z]{1}Z[0-9A-Z]{1}$/;
+        const textField = document.getElementById("gstError");
+        const inputField = document.getElementById("gst");
+
+        if (inputTxt.value === '') {
+            textField.textContent = '* Not a valid Gst number';
+            textField.style.color = "red";
+            inputField.style.color = "red";
+            document.getElementById("submit").disabled = true;
+        } else if (regx.test(inputTxt.value)) {
+            textField.textContent = '';
+            textField.style.color = "green";
+            inputField.style.color = "green";
+            document.getElementById("submit").disabled = false;
+        } else {
+            textField.textContent = '* Not a valid GST number!';
+            textField.style.color = "red";
+            inputField.style.color = "red";
+            document.getElementById("submit").disabled = true;
+        }
+    }
+
+    function addressValidation(inputTxt) {
+        var regx = /^[a-zA-Z]+$/;
+        var textField = document.getElementById("addressError");
+        var inputField = document.getElementById("address");
+
+        if (inputTxt.value != '') {
+            if (inputTxt.value.length >= 2) {
+                if (inputTxt.value.match(regx)) {
+                    textField.textContent = '';
+                    textField.style.color = "green";
+                    inputField.style.color = "green";
+                    document.getElementById("submit").disabled = false;
+                }
+                else {
+                    textField.textContent = 'invalid address line!';
+                    textField.style.color = "red";
+                    inputField.style.color = "red";
+                    document.getElementById("submit").disabled = true;
+                }
+            }
+            else {
+                textField.textContent = 'your input must be more than two chracters!';
+                textField.style.color = "red";
+                inputField.style.color = "red";
+                document.getElementById("submit").disabled = true;
+            }
+        }
+        else {
+            textField.textContent = 'invalid address line!';
+            textField.style.color = "red";
+            inputField.style.color = "red";
+            document.getElementById("submit").disabled = true;
+        }
+    }
+
+    function postOfficeValidation(inputTxt) {
+        var regx = /^[a-zA-Z]+$/;
+        var textField = document.getElementById("postofficeError");
+        var inputField = document.getElementById("postoffice");
+
+        if (inputTxt.value != '') {
+            if (inputTxt.value.length >= 2) {
+                if (inputTxt.value.match(regx)) {
+                    textField.textContent = '';
+                    textField.style.color = "green";
+                    inputField.style.color = "green";
+                    document.getElementById("submit").disabled = false;
+                }
+                else {
+                    textField.textContent = 'invalid post office name!';
+                    textField.style.color = "red";
+                    inputField.style.color = "red";
+                    document.getElementById("submit").disabled = true;
+                }
+            }
+            else {
+                textField.textContent = 'your input must be more than two chracters!';
+                textField.style.color = "red";
+                inputField.style.color = "red";
+                document.getElementById("submit").disabled = true;
+            }
+        }
+        else {
+            textField.textContent = 'invalid post office name!';
+            textField.style.color = "red";
+            inputField.style.color = "red";
+            document.getElementById("submit").disabled = true;
+        }
+    }
+
+    function zipcodeValidation(inputTxt) {
+        const regx = /^\d{5}$/;
+        const textField = document.getElementById("zipcodeError");
+        const inputField = document.getElementById("zipcode");
+
+        if (inputTxt.value === '') {
+            textField.textContent = '* Invalid Zipcode! It should be exactly 6 digits.';
+            textField.style.color = "red";
+            inputField.style.color = "red";
+            document.getElementById("submit").disabled = true;
+        } else if (regx.test(inputTxt.value)) {
+            textField.textContent = '';
+            textField.style.color = "green";
+            inputField.style.color = "green";
+            document.getElementById("submit").disabled = false;
+        } else {
+            textField.textContent = '* Invalid Zipcode! It should be exactly 6 digits.';
+            textField.style.color = "red";
+            inputField.style.color = "red";
+            document.getElementById("submit").disabled = true;
+        }
+    }
+
+
+    function descriptionValidation() {
+        const textarea = document.getElementById("description");
+        const errorSpan = document.getElementById("descriptionError");
+        const words = textarea.value.trim().split(/\s+/);
+
+        if (words.length < 2) {
+            errorSpan.textContent = '* Description must contain at least two words!';
+            errorSpan.style.color = "red";
+            textarea.style.color = "red";
+            document.getElementById("submit").disabled = true;
+        } else {
+            errorSpan.textContent = '';
+            textarea.style.color = "green";
+            document.getElementById("submit").disabled = false;
+        }
+    }
+
+
+
+    function checkAllFields(event) {
+        event.preventDefault();
+
+        var ownerNameField = document.getElementById("ownerName");
+        var ownerNameError = document.getElementById("ownerNameError");
+
+        var companyField = document.getElementById("companyName");
+        var companyError = document.getElementById("companyNameError");
+
+        var phoneField = document.getElementById("phone");
+        var phoneError = document.getElementById("phoneError");
+
+        var emailField = document.getElementById("email");
+        var emailError = document.getElementById("emailError");
+
+        var passwordField = document.getElementById("password");
+        var passwordError = document.getElementById("pass1");
+
+        var cpasswordField = document.getElementById("cpassword");
+        var cpasswordError = document.getElementById("pass2");
+
+        var gstField = document.getElementById("gst");
+        var gstError = document.getElementById("gstError");
+
+        var addressField = document.getElementById("address");
+        var addressError = document.getElementById("addressError");
+
+        var postofficeField = document.getElementById("postoffice");
+        var postofficeError = document.getElementById("postofficeError");
+
+        var zipcodeField = document.getElementById("zipcode");
+        var zipcodeError = document.getElementById("zipcodeError");
+
+        var descriptionField = document.getElementById("description");
+        var descriptionError = document.getElementById("descriptionError");
+
+        ownerNameValidation(ownerNameField);
+        validateCompanyName(companyField);
+        phoneValidation(phoneField);
+        emailValidation(emailField);
+        passwordValidation(passwordField);
+        cpasswordValidation(cpasswordField);
+        gstValidation(gstField);
+        addressValidation(addressField);
+        postOfficeValidation(postofficeField);
+        zipcodeValidation(zipcodeField);
+        descriptionValidation(descriptionField);
+
+        var allFieldsValid =
+            ownerNameError.style.color === "green" &&
+            companyError.style.color === "green" &&
+            phoneError.style.color === "green" &&
+            emailError.style.color === "green" &&
+            passwordError.style.color === "green" &&
+            cpasswordError.style.color === "green" &&
+            gstError.style.color === "green" &&
+            addressError.style.color === "green" &&
+            postofficeError.style.color === "green" &&
+            zipcodeError.style.color === "green" &&
+            descriptionError.style.color === "green";
+
+        document.getElementById("submit").disabled = !allFieldsValid;
+
+        if (allFieldsValid) {
+            checkConfirmation(event);
+        }
+    }
+
+    ownerNameField.onkeyup = checkAllFields;
+    companyField.onkeyup = checkAllFields;
+    phoneField.onkeyup = checkAllFields;
+    emailField.onkeyup = checkAllFields;
+    passwordField.onkeyup = checkAllFields;
+    cpasswordField.onkeyup = checkAllFields;
+    gstField.onkeyup = checkAllFields;
+    addressField.onkeyup = checkAllFields;
+    postofficeField.onkeyup = checkAllFields;
+    zipcodeField.onkeyup = checkAllFields;
+    descriptionField.onkeyup = checkAllFields;
+
+    function checkConfirmation(event) {
+        var userConfirmation = window.confirm("Please review your details before final submission!");
+        if (userConfirmation) {
+            window.alert("Congratulations! Welcome to EazeFin. You can login now");
+            document.getElementById("registrationForm").submit();
+        }
+    }
+
 </script>
-</html>
