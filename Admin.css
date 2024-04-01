@@ -44,7 +44,7 @@
               left: -300px; /* Initially hidden */
               width: 200px;
               height: 97vh; /* 100% of viewport height */
-              background-color: #7d6262;
+              background: linear-gradient(black, red);
               transition: left 0.3s ease-in-out;
               z-index:8;
           }
@@ -69,7 +69,7 @@
   
          .container-nav {
           text-align: center;
-          background-color: #981515;
+          background: linear-gradient(to right,  rgb(31, 31, 31), rgb(184, 57, 26));
           padding-bottom: 8px;
           width: 100%;
           margin: auto; 
@@ -86,6 +86,7 @@
   
       .nav-item a {
           color: rgb(255, 255, 255);
+          margin-bottom: 10px;
       }
   
       .nav-item a:hover {
