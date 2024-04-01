@@ -44,7 +44,7 @@
               left: -300px; /* Initially hidden */
               width: 200px;
               height: 97vh; /* 100% of viewport height */
-              background: linear-gradient(to right,  rgb(0, 0, 0), rgb(149, 81, 81));
+              background: linear-gradient(rgb(0, 0, 0), rgb(149, 81, 81));
               transition: left 0.3s ease-in-out;
               z-index:8;
           }
