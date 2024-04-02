@@ -150,13 +150,15 @@
                     <div class="company-performance-graph">
                         <h3>Company Performance Graph</h3>
                     </div><br>
+			 <canvas id="myChart" style="width:100%;margin: auto; max-width: 600px;"></canvas>
 
-                      <img src="https://i0.wp.com/www.salesforceblogger.com/wp-content/uploads/2023/02/image-3-1.png?resize=1200%2C727&ssl=1" alt="Company Performance Graph" class="image-below-company-graph">
+<!--                       <img src="https://i0.wp.com/www.salesforceblogger.com/wp-content/uploads/2023/02/image-3-1.png?resize=1200%2C727&ssl=1" alt="Company Performance Graph" class="image-below-company-graph"> -->
                 <!-- Add your graph or chart here --><br><br>	
 	                  <div class="employee-performance-graph">
                        <h3>Employee Performance Graph</h3>
                     </div><br>
-	                    <img src="https://exceljet.net/sites/default/files/styles/original_with_watermark/public/images/charttypes/pareto%20chart.png" alt="Employee Performance Graph" class="image-below-company-graph">
+			 <canvas id="myChart2" style="width:100%;margin: auto; max-width: 600px;"></canvas>
+<!-- 	                    <img src="https://exceljet.net/sites/default/files/styles/original_with_watermark/public/images/charttypes/pareto%20chart.png" alt="Employee Performance Graph" class="image-below-company-graph"> -->
                                <!-- Add your graph or chart here --><br>
                 </div>                                        
            </div>                              
@@ -190,6 +192,50 @@
       // Load menu.html into the navbar
       $('#navbarSupportedContent').load('navbar.html');
     });
+  </script>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+  </script>
+
+<script>
+  const xValue = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xValue,
+    datasets: [{
+      data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+      borderColor: "red",
+      fill: false
+    },{
+      data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+      borderColor: "green",
+      fill: false
+    }]
+  },
+  options: {
+    legend: {display: false}
+  }
+});
+  </script>
+
+  <script>
+    var xValues = ["Suresh M", "Akhil L", "Aman S", "Rohit P", "Amit R"];
+var yValues = [55, 49, 44, 24, 19];
+var barColors = ["red", "green","blue","orange","brown"];
+
+new Chart("myChart2", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  }
+});
   </script>
 
 </body>
