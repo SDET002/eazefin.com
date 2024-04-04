@@ -77,6 +77,16 @@ h1, h2 {
   background: linear-gradient(to right, black,rgba(133, 127, 158, 0.807) );
 }
 
+.chart {
+
+  width:100%;
+  margin: auto;
+  max-width: 650px; 
+  background-color:   rgb(255, 255, 255);
+  padding: 30px;
+
+}
+
 </style>
 
 <body style="background-color: #d4d5d6;">
@@ -205,7 +215,8 @@ h1, h2 {
     <div class="row mb-4">
       <div class="col text-center">
         <h2>Your Performance Graph</h2>
-        <img src="https://static.vecteezy.com/system/resources/previews/007/643/970/original/profit-and-loss-report-illustration-of-infographic-business-graph-and-diagram-planning-vector.jpg" class="img-fluid">
+	      <canvas id="myChart3" class="chart"></canvas>
+<!--         <img src="https://static.vecteezy.com/system/resources/previews/007/643/970/original/profit-and-loss-report-illustration-of-infographic-business-graph-and-diagram-planning-vector.jpg" class="img-fluid"> -->
       </div>
     </div>
     <div class="row mb-4">
@@ -255,6 +266,27 @@ h1, h2 {
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="script.js"></script>
+	<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+
+<script>
+  var xValues = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+var yValues = [550, 490, 440, 200, 190];
+var barColors = ["blue", "blue", "blue", "blue", "blue"];
+
+new Chart("myChart3", {
+type: "bar",
+data: {
+  labels: xValues,
+  datasets: [{
+    label: 'Your Sales',
+    backgroundColor: barColors,
+    data: yValues
+  }]
+}
+});
+</script>
 </body>
 
 </html>
