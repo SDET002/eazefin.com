@@ -3,20 +3,25 @@
       /* Custom CSS for the boxes */
 
     .info-box {
-        background-color: #f8f9fa;
+        background-color: rgba(255, 255, 255, 0.815);
         padding: 20px;
         margin-bottom: 20px;
-        border: 1px solid #ccc;
+        border: 1px solid #1f1e1e;
         border-radius: 5px;
         text-align: center;
         z-index:7;
       }
+
+      .info-box p {
+        font-size: x-large;
+
+      }
       .about-box,
       .graph-box {
-        background-color: #f8f9fa;
+        background-color: rgba(255, 255, 255, 0.815);
         padding: 40px;
         margin-top: 40px;
-        border: 1px solid #ccc;
+        border: 1px solid #000000;
         border-radius: 5px;
         text-align: center;
         z-index:7;
@@ -44,7 +49,7 @@
               left: -300px; /* Initially hidden */
               width: 200px;
               height: 97vh; /* 100% of viewport height */
-              background: linear-gradient(rgb(0, 0, 0), rgb(149, 81, 81));
+              background: linear-gradient(black, rgb(149, 81, 81));
               transition: left 0.3s ease-in-out;
               z-index:8;
           }
@@ -69,7 +74,7 @@
   
          .container-nav {
           text-align: center;
-         background: linear-gradient(to right,  rgb(0, 0, 0), rgb(149, 81, 81));
+          background: linear-gradient(to right,  rgb(0, 0, 0), rgb(149, 81, 81));
           padding-bottom: 8px;
           width: 100%;
           margin: auto; 
@@ -106,5 +111,26 @@
       .row {
           width: 100%;
       }
+
+      video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+        pointer-events: none;
+    }
  
        
