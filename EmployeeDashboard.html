@@ -19,7 +19,7 @@ h1, h2 {
 }
 
 .card {
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.795);
   margin: 10px;
   padding: 20px;
 }
@@ -34,7 +34,7 @@ h1, h2 {
 }
 
 .table td, .table th {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255, 0.795);
   text-align: center;
 }
 
@@ -43,6 +43,7 @@ h1, h2 {
   padding: 5px;
   width: 80%;
   background-color: rgb(255, 255, 255);
+  border-radius: 5px;
 }
 
 .tab-approved {
@@ -87,6 +88,8 @@ h1, h2 {
 
 }
 
+
+
 </style>
 
 <body style="background-color: #d4d5d6;">
@@ -113,7 +116,7 @@ h1, h2 {
 </nav>
 
 <div class="container-nav">
-  <a href="index.html" class="navbar-brand mx-auto">
+  <a href="LandingPage.html" class="navbar-brand mx-auto">
     <img src="main logo.png" width="30" height="30" class="d-inline-block align-top" alt="EazeFin Logo">
     <span>EazeFin | </span>
   </a>
@@ -165,7 +168,7 @@ h1, h2 {
     <span class="nav-item">Settings</span></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="index.html">
+    <a class="nav-link" href="LandingPage.html">
       <i class="bx bx-log-out"></i>
     <span class="nav-item">Logout</span></a>
   </li>
@@ -173,6 +176,13 @@ h1, h2 {
   </ul>
 </div>
 
+
+<!-- background video -->
+<video autoplay muted loop>
+  <source src="C:\Users\2317330\Downloads\7989448-hd_1920_1080_25fps.mp4" type="video/mp4"></video>
+</video>
+
+<div class="overlay"></div>
 
   
 
@@ -189,7 +199,7 @@ h1, h2 {
     <!-- </div> -->
 
     <div class="row mt-5">
-      <div class="col text-center">
+      <div class="col text-center text-light">
         <h4>Welcome, <span id="name"></span>!</h4>
       </div>
     </div>
@@ -206,21 +216,24 @@ h1, h2 {
       <div class="col-lg-6">
         <div class="card">
           <div class="card-box">
-            <h5 class="card-title">Salary</h5>
+            <h5 class="card-title">Salary (₹)</h5>
             <p class="card-text"><span id="salary"></span></p>
           </div>
         </div>
       </div>
     </div>
     <div class="row mb-4">
-      <div class="col text-center">
+      <div class="col text-center text-light">
         <h2>Your Performance Graph</h2>
-	      <canvas id="myChart3" class="chart"></canvas>
-<!--         <img src="https://static.vecteezy.com/system/resources/previews/007/643/970/original/profit-and-loss-report-illustration-of-infographic-business-graph-and-diagram-planning-vector.jpg" class="img-fluid"> -->
+         
+        <canvas id="myChart3" class="chart"></canvas>
+
+
+        <!-- <img src="https://static.vecteezy.com/system/resources/previews/007/643/970/original/profit-and-loss-report-illustration-of-infographic-business-graph-and-diagram-planning-vector.jpg" class="img-fluid"> -->
       </div>
     </div>
     <div class="row mb-4">
-      <div class="col text-center">
+      <div class="col text-center text-light">
         <h2>Employee Sales Approval</h2>
       </div>
     </div>
@@ -266,9 +279,10 @@ h1, h2 {
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="script.js"></script>
-	<script
+<script
 src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 </script>
+
 
 <script>
   var xValues = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
