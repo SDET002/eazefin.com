@@ -64,7 +64,7 @@
   .nav-bar {
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(to right,  rgb(148, 255, 189), rgb(35, 55, 111));
+    background: linear-gradient(to right, rgb(189, 189, 190),  rgb(37, 55, 78));
    
     
   }
@@ -286,6 +286,7 @@
   font-weight: bold;
   text-align:center;
   margin-top: 50px;
+  color: white;
 
 }
 
@@ -349,6 +350,8 @@ background-color: rgb(128, 128, 128);
   text-decoration: none;
   background-color: rgb(44, 44, 132);
 }
+
+
 
 
 /* ----------------------------helpdesk css------------------------------------- */
