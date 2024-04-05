@@ -583,15 +583,15 @@ font-weight: bold;
       margin: 0 auto;
       max-width: 550px;
       width: 100%;
-      background: white;
-      background-color: #d4d5d6;
+      color: white;
+      
     }
  
     .formbold-steps {
       padding-bottom: 18px;
       margin-bottom: 35px;
       border-bottom: 1px solid #DDE3EC;
-      background-color: #d4d5d6;
+      background-color: #2384e5;
     }
     .formbold-steps ul {
       padding: 0;
@@ -608,6 +608,12 @@ font-weight: bold;
       font-size: 16px;
       line-height: 24px;
       color: #536387;
+    }
+
+    .formbold-form-step-1 {
+      background-color: #00000062 !important;
+      padding: 20px;
+      border-radius: 10px;
     }
     .formbold-steps li span {
       display: flex;
@@ -655,7 +661,7 @@ font-weight: bold;
       box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
     }
     .formbold-form-label {
-      color: #07074D;
+      color: #ffffff;
       font-weight: 500;
       font-size: 14px;
       line-height: 24px;
@@ -867,3 +873,6 @@ font-weight: bold;
     z-index: -1;
     pointer-events: none;
 }
+
+
+ 
