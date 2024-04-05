@@ -152,6 +152,7 @@
       text-align: center;
       margin-top: 10px;
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: white;
     }
      
     .main-brand-heading sup {
@@ -163,9 +164,8 @@
 
     .slideshow-container {
         position:relative;
-         width: 98%;
+        width: 98%;
         margin: auto;
-        
     }
 
     .myslides {
@@ -179,7 +179,7 @@
 /* services heading css */
 
     .services-heading {
-      background-color: rgb(35, 55, 111);
+      background-color: rgb(35, 55, 111, 0.8);
       color: aliceblue;
       text-align: center;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -237,6 +237,7 @@
       margin: 20px;
       gap: 20px;
       align-items: center;
+      color: white;
       
     }
 
@@ -846,4 +847,23 @@ font-weight: bold;
     z-index:0 !important;
   } 
 
- 
+  video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+    pointer-events: none;
+}
