@@ -12,6 +12,13 @@
         z-index:7;
       }
 
+
+
+      .graph-box:hover, .about-box:hover, .info-box:hover {
+        background-color: rgba(255, 255, 255);
+
+      }
+
       .info-box p {
         font-size: x-large;
 
