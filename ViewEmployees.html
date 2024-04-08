@@ -19,6 +19,10 @@
             border-radius: 5px;
             background-color: #f9f9f9;
         }
+
+  .container-emp h3 {
+           text-align: center;
+        }
         .add-button {
             background-color: #f9f9f9;
             color: #000;
@@ -37,7 +41,7 @@
             margin-top: 20px;
         }
          td {
-            border: 1px solid #ddd;
+            border: 1px solid #7a7979;
             padding: 8px;
             text-align: center;
         }
@@ -57,9 +61,25 @@
         .employee-details {
             margin-top: 70px;
         }
+     
+      .btn {
+          font-size: 20px;
+          background-color: #69928A;
+          border-radius: 10px;
+          color: white;
+          padding: 10px;
+          border: 1px solid black;
+          text-align: center;
+          font-weight: bold;
+        }
+
+        .btn:hover {
+          background-color: #49635e;
+          color: white;
+        }
    
 </style>
-<body style="background-color: #d4d5d6;">
+<body style="background:url('https://img.freepik.com/premium-photo/background-design_867433-171.jpg?size=626&ext=jpg&ga=GA1.1.1700460183.1712448000&semt=ais'); background-repeat: no-repeat; background-size: cover;">
   
     <nav class="navbar navbar-light">
 
@@ -144,9 +164,7 @@
    <div class="employee-details">
    <h2 class="font-weight-bold text-center py-3 mb-4">Employee Details</h2> 
     <div class="container-emp" >
-        <h4>
-            <a href="AddEmployee.html"><input class="btn-primary" type="button" name="add-button" value="Add Employee"/></a>
-        </h4>
+        
         <table>
             
             <tbody>
@@ -203,6 +221,11 @@
 
             </tbody>
         </table>
+
+     <h4>
+            <a href="AddEmployee.html"><input class="btn-primary" type="button" name="add-button" value="Add Employee"/></a>
+        </h4>
+     
     </div>
 
 </div>
