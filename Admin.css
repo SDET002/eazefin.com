@@ -41,7 +41,8 @@
           color: aliceblue;
           padding: 20px 0px;
           text-align: center;
-          position: absolute;
+          bottom: 0;
+          position: fixed;
           width: 100%;
           cursor: pointer;
           z-index: 9;
