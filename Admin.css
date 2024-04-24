@@ -12,12 +12,10 @@
         z-index:7;
       }
 
-
-
-      .graph-box:hover, .about-box:hover, .info-box:hover {
+      /* .info-box:hover {
         background-color: rgba(255, 255, 255);
 
-      }
+      } */
 
       .info-box p {
         font-size: x-large;
@@ -32,6 +30,11 @@
         border-radius: 5px;
         text-align: center;
         z-index:7;
+      }
+
+      .graph-box:hover, .about-box:hover, .info-box:hover {
+        background-color: rgba(255, 255, 255);
+
       }
       .footer-content {
           background-color: black;
@@ -58,19 +61,19 @@
               height: 97vh; /* 100% of viewport height */
               background: linear-gradient(black, rgb(149, 81, 81));
               transition: left 0.3s ease-in-out;
-              z-index:8;
+              z-index:10;
           }
           .side-panel.open {
               left: 0; /* Show the side panel */
           }
           .navbar-toggler{
-            z-index:10;
+            z-index:11;
             position: fixed;
-            background-color: rgb(220, 220, 220);
+            background-color: rgb(220, 220, 220) !important;
           }
   
           .navbar-nav{
-            padding: 40px 20px;	
+            padding: 40px 20px !important;	
             
           }
   
@@ -82,9 +85,9 @@
          .container-nav {
           text-align: center;
           background: linear-gradient(to right,  rgb(0, 0, 0), rgb(149, 81, 81));
-          padding-bottom: 8px;
+          padding-bottom: 8px !important;
           width: 100%;
-          margin: auto; 
+          margin: auto  !important; 
           position: fixed !important;
           top: 0 !important;
           z-index:9; 
