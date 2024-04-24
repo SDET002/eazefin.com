@@ -1,26 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8">
-	    <link rel="icon" href="./main logo.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>EazeFin - Approvals</title>
+        <link rel="icon" href="./main logo.png">
+        <link rel="stylesheet" th:href="@{/css/employee-sales-request.css}">
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' 	rel='stylesheet'>
   <link rel="stylesheet" type="text/css" href="Admin.css">
 
     </head>
-	<style>
-.side-panel {
+    <style>
+      
+      .side-panel {
   background: linear-gradient(black,rgba(133, 127, 158, 0.807) );
 }
 
 .container-nav {
   background: linear-gradient(to right, black,rgba(133, 127, 158, 0.807) );
 }
-	</style>
+
+table {
+	border-collapse: collapse;
+}
+ 
+th, td {
+	padding: 8px;
+	text-align: justify;
+	border-bottom: 1px solid #ddd;
+}
+ 
+.requests-table tbody, .returns-table tbody {
+	display: block;
+	max-height: 150px;
+	overflow-y: auto;
+}
+ 
+.requests-table tr, .returns-table tr {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}
+ 
+.requests-table thead, .returns-table thead {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}
+ 
+.no-data {
+	text-align: center;
+	padding: 20px;
+	font-style: italic;
+	color: #999;
+}
+    </style>
     <body style="background-color: #d4d5d6;">
 
 
@@ -110,122 +151,101 @@
 </div>
 
         <!-- Sales approval contetnt starts here -->
-        <div class="p-3 mb-2 bg-secondary-subtle text-secondary-emphasis">
-            <!-- Table 1 - Bootstrap Table Component -->
-            <section class="py-3 py-md-5">
-                <h4 style="text-align: center; margin-bottom: 50px;">Sales Approval</h4>
-                <div class="card card-body" style="width: 78%; margin: auto;">
-                    <div class="container" style="margin-top: 25px;">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-9 col-xl-8">
-                                <center>
-                                <p class="d-inline-flex gap-1">
-                                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRequest" aria-expanded="false" aria-controls="collapseRequest">
-                                    Request Amount
-                                    </button>
-                                    <button class="btn btn-primary" style="margin-left: 50px;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAddSales" aria-expanded="false" aria-controls="collapseAddSales">
-                                        Day Earnings
-                                    </button>
-                                </p>
-                                </center>
-                                <div class="collapse" id="collapseRequest">
-                                    <div class="card card-body">
-                                        <h4 style="text-align: center;">Request Amount</h4>
-                                        <div class="card widget-card border-light shadow-sm">
-                                            <div class="card-body p-4">
-                                                <!-- <h5 class="card-title widget-card-title mb-4">Details</h5> -->
-                                                <div class="table-responsive">
-                                                    <table class="table table-borderless bsb-table-xl text-nowrap align-middle m-0">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Date</th>
-                                                                <th>Amount</th>
-                                                                <th>Action</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    <input type="date" name="todaydaterequest" id="todaydaterequest" disabled>
-                                                                </td>
-                                                                <td>
-                                                                    <input type="text" class="" name="request_amount" placeholder="00000.00">
-                                                                </td>
-                                                                <td>
-                                                                    <button class="btn btn-success">Send</button>
-                                                                </td>
-                                                            </tr>                                               
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                
-
-                                
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container" style="margin-top: 25px;">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-9 col-xl-8">
-                                <p class="d-inline-flex gap-1">
-                                </p>
-                                <div class="collapse" id="collapseAddSales">
-                                    <div class="card card-body">
-                                        <h4 style="text-align: center;">Day Earnings</h4>
-                                        <div class="card widget-card border-light shadow-sm">
-                                            <div class="card-body p-4">
-                                                <!-- <h5 class="card-title widget-card-title mb-4">Details</h5> -->
-                                                <div class="table-responsive">
-                                                    <table class="table table-borderless bsb-table-xl text-nowrap align-middle m-0">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Date</th>
-                                                                <th>Amount</th>
-                                                                <th>Action</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    <input type="date" name="todaydatereturn" id="todaydatereturn" disabled>
-                                                                </td>
-                                                                <td>
-                                                                    <input type="text" class="" name="request_amount" placeholder="00000.00">
-                                                                </td>
-                                                                <td>
-                                                                    <button class="btn btn-success">Send</button>
-                                                                </td>
-                                                            </tr>                                               
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                
-
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        
-        <!--Footer-->
-        <div class="footer-content">
-            <a>About Us</a><br><br>
-            <a>Privacy Policy</a><br><br>
-            <a>&copy; 2024 EazeFin<sup>&reg;</sup></a>
-        </div>
+        <div class="card card-body">
+          <div
+                class="card-title text-light fs-3 badge bg-secondary font-monospace mt-5">
+                Sales Amount Request</div>
+           
+              <div class="section-container">
+          <div class="section">
+          <div class="card">
+          <div class="card-body">
+          <div
+                        class="card-title text-white fs-3 text-center bg-info bg-gradient">Your
+                        Requests</div>
+          <table class="requests-table table-responsive">
+          <thead>
+          <tr>
+          <th>Transaction ID</th>
+          <th>Request Amount</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr th:each="request : ${pendingRequests}"
+                            th:data-sales-id="${request.sales_transaction_id}">
+          <td th:text="${request.sales_transaction_id}"></td>
+          <td th:text="${request.sales_amount_request}"></td>
+          </tr>
+          <tr th:if="${#lists.isEmpty(pendingRequests)}">
+          <td colspan="2" class="no-data">No requests to display.</td>
+          </tr>
+          </tbody>
+          </table>
+          </div>
+          </div>
+          </div>
+           
+                <div class="section">
+          <div class="card">
+          <div class="card-body">
+          <div
+                        class="card-title text-white fs-3 text-center bg-success bg-gradient">Your
+                        Returns</div>
+          <table class="returns-table">
+          <thead>
+          <tr>
+          <th>Transaction ID</th>
+          <th>Return Amount</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr th:each="returnData : ${pendingReturns}"
+                            th:data-sales-id="${returnData.sales_transaction_id}">
+          <td th:text="${returnData.sales_transaction_id}"></td>
+          <td th:text="${returnData.sales_amount_return}"></td>
+          </tr>
+          <tr th:if="${#lists.isEmpty(pendingReturns)}">
+          <td colspan="2" class="no-data">No returns to display.</td>
+          </tr>
+          </tbody>
+          </table>
+          </div>
+          </div>
+          </div>
+          </div>
+           
+              <div class="section-container">
+          <div class="section">
+          <div class="card">
+          <div class="card-body">
+          <div
+                        class="card-title text-white fs-3 text-center bg-info bg-gradient">Submit
+                        Request Amount</div>
+          <label for="request-amount">Amount:</label> <input type="number"
+                        id="request-amount" placeholder="Enter request amount">
+          <button class="submit-btn bg-gradient" id="submit-request">
+                        Submit <i class="bi bi-send"></i>
+          </button>
+          </div>
+          </div>
+          </div>
+          <div class="section">
+          <div class="card">
+          <div class="card-body">
+          <div
+                        class="card-title text-white fs-3 text-center bg-success bg-gradient">Submit
+                        Return Amount</div>
+          <label for="return-amount">Amount:</label> <input type="number"
+                        id="return-amount" placeholder="Enter return amount">
+          <button class="btn btn-info bg-gradient text-white"
+                        id="submit-return">
+                        Submit <i class="bi bi-send"></i>
+          </button>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
 
         
 <!--Footer-->
@@ -247,17 +267,101 @@
       $('#navbarSupportedContent').load('navbar.html');
     });
   </script>
-  <!-- Bootstrap JS and dependencies (optional) 
+  <!-- Bootstrap JS and dependencies (optional) -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="C:\Users\2317330\OneDrive - Cognizant\Documents\EazeFin Finance\script.js"></script>   -->
+  <script src="C:\Users\2317330\OneDrive - Cognizant\Documents\EazeFin Finance\script.js"></script>
 
 <script>
     const currentDate = new Date();
     const formattedDate = currentDate.toISOString().split('T')[0];
     document.getElementById('todaydaterequest').value = formattedDate;
     document.getElementById('todaydatereturn').value = formattedDate;
+
+    
 </script>
     </body>
+    <script>
+      const requestAmountInput = document.getElementById('request-amount');
+const returnAmountInput = document.getElementById('return-amount');
+const submitRequestBtn = document.getElementById('submit-request');
+const submitReturnBtn = document.getElementById('submit-return');
+const cancelRequestBtns = document.querySelectorAll('.cancel-btn[data-is-request="true"]');
+const cancelReturnBtns = document.querySelectorAll('.cancel-btn[data-is-request="false"]');
+ 
+submitRequestBtn.addEventListener('click', () => {
+	const requestAmount = requestAmountInput.value;
+	if (requestAmount <= 0) {
+		alert('Request Amount should be greater than 0!');
+		return false;
+	}
+	else {
+		sendSalesRequest('request', requestAmount);
+	}
+});
+ 
+submitReturnBtn.addEventListener('click', () => {
+	const returnAmount = returnAmountInput.value;
+	if (returnAmount <= 0) {
+		alert('Return Amount should be greater than 0!');
+		return false;
+	}
+	else {
+		sendSalesRequest('return', returnAmount);
+	}
+});
+ 
+cancelRequestBtns.forEach(btn => {
+	btn.addEventListener('click', () => {
+		const salesId = btn.dataset.salesId;
+		removeRequestFromUI(salesId);
+	});
+});
+ 
+cancelReturnBtns.forEach(btn => {
+	btn.addEventListener('click', () => {
+		const salesId = btn.dataset.salesId;
+		removeReturnFromUI(salesId);
+	});
+});
+ 
+function sendSalesRequest(requestType, amount) {
+	fetch('/employee/sales-request', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({ requestType, amount })
+	})
+		.then(response => response.json())
+		.then(data => {
+			if (data.status === 'success') {
+				// Update the UI with the new request or return
+				location.reload();
+			} else {
+				alert(data.message);
+			}
+		})
+		.catch(error => {
+			console.error('Error:', error);
+			alert('An error occurred. Please try again later.');
+		});
+ 
+}
+ 
+function removeRequestFromUI(salesTransactionId) {
+	const requestRow = document.querySelector(`.requests-table tr[data-sales-id="${salesTransactionId}"]`);
+	if (requestRow) {
+		requestRow.remove();
+	}
+}
+ 
+function removeReturnFromUI(salesId) {
+	const returnRow = document.querySelector(`.returns-table tr[data-sales-id="${salesId}"]`);
+	if (returnRow) {
+		returnRow.remove();
+	}
+}
+    </script>
 </html>
