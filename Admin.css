@@ -37,12 +37,11 @@
 
       }
       .footer-content {
-          background-color: black;
+           background-color: black;
           color: aliceblue;
           padding: 20px 0px;
           text-align: center;
-          bottom: 0;
-          position: fixed;
+          position: absolute;
           width: 100%;
           cursor: pointer;
           z-index: 9;
