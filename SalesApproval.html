@@ -1,14 +1,22 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-	<link rel="icon" href="./main logo.png">
+    <link rel="icon" href="./main logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sales Approval</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' 	rel='stylesheet'>
+  <link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="Admin.css">
     <style>
 	
@@ -21,49 +29,80 @@
             margin: 0;
             padding: 0;
         } */
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-        .add-button {
-            background-color: #f9f9f9;
-            color: #000;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .add-button:hover {
-            background-color: #f9f9f9;
-        }
+
+
         table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-	        }
-         td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
-        }
-
-        .approvaltable {
-
-            width: 100%;
-            margin: auto;
-            text-align: center;
-            top: 700px;
-            
-           
-            border-radius: 5px;
-
-        }
-	      
+	width: 100%;
+	border-collapse: collapse;
+}
+ 
+th, td {
+	padding: 8px;
+	text-align: justify;
+	border-bottom: 1px solid #ddd;
+}
+ 
+th {
+	background-color: #f2f2f2;
+}
+ 
+.approve-btn {
+	background-color: #4CAF50;
+	color: white;
+	padding: 6px 12px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-right: 4px;
+}
+ 
+.reject-btn {
+	background-color: #f44336;
+	color: white;
+	padding: 6px 12px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+ 
+.section-container {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+ 
+.section {
+	width: 48%;
+}
+ 
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+ 
+.requests-table tbody, .returns-table tbody {
+	display: block;
+	max-height: 400px;
+	overflow-y: auto;
+}
+ 
+.requests-table tr, .returns-table tr {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}
+ 
+.requests-table thead, .returns-table thead {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}
+ 
+.no-data {
+	text-align: center;
+	padding: 20px;
+	font-style: italic;
+	color: #999; }
         
     </style>
 </head>
@@ -91,7 +130,7 @@
 </nav>
 
 <div class="container-nav">
-  <a href="index.html" class="navbar-brand mx-auto">
+  <a href="LandingPage.html" class="navbar-brand mx-auto">
     <img src="main logo.png" width="30" height="30" class="d-inline-block align-top" alt="EazeFin Logo">
     <span>EazeFin | </span>
   </a>
@@ -143,7 +182,7 @@
     <span class="nav-item">Settings</span></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="index.html">
+    <a class="nav-link" href="LandingPage.html">
       <i class="bx bx-log-out"></i>
     <span class="nav-item">Logout</span></a>
   </li>
@@ -153,78 +192,101 @@
 
     <!-- Sales approval table -->
 
-    <div class="container" >
-        <div class="approvaltable">
-            <h2> Sales Approval</h2>
-        
-<table>
-	
-        <tr>
-            <th>Employee ID</th>
-            <th>Request</th>
-            <th>Return</th>
-            <th>Approval/Reject</th>
-        </tr>
-        <tr>
-            <td>Emp1</td>
-            <td>1000</td>
-            <td>0</td>
-            <td>
-                <button style="background-color: #04AA6D;" class="approval-button">✓ Approve</button>
-                <button style="background-color: #f44336";class="approval-button">✘ Reject</button>
-            </td>
-        </tr>
 
-	<tr>
-            <td>Emp2</td>
-            <td>2000</td>
-            <td>0</td>
-            <td>
-                <button style="background-color: #04AA6D;" class="approval-button">✓ Approve</button>
-                <button style="background-color: #f44336";class="approval-button">✘ Reject</button>
-            </td>
-        </tr>
+    <div class="card card-body">
+      <div
+            class="card-title text-light fs-3 badge bg-dark font-monospace mt-5">Sales Approval</div>
+       
+          <div class="section-container">
+      <div class="section">
+      <div class="card">
+      <div class="card-body">
+      <div
+                    class="card-title text-white fs-3 text-center bg-info bg-gradient">Requests</div>
+      <table class="requests-table">
+      <thead>
+      <tr>
+      <th hidden="">Sales ID</th>
+      <th>Transaction ID</th>
+      <th>Employee ID</th>
+      <th>Request Amount</th>
+      <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="request : ${pendingRequests}">
+      <td hidden="" th:text="${request.sales_id}"></td>
+      <td th:text="${request.sales_transaction_id}"></td>
+      <td th:text="${request.employee_emp_id}"></td>
+      <td th:text="${request.sales_amount_request}"></td>
+      <td>
+      <button class="approve-btn"
+                            th:data-sales-id="${request.sales_id}"
+                            th:data-is-request-approval="true">
+      <i class="bi bi-check-lg"></i>
+      </button>
+      <button class="reject-btn"
+                            th:data-sales-id="${request.sales_id}"
+                            th:data-is-request-approval="true">
+      <i class="bi bi-x-lg"></i>
+      </button>
+      </td>
+      </tr>
+      <tr th:if="${#lists.isEmpty(pendingRequests)}">
+      <td colspan="5" class="no-data">No requests to display.</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      </div>
+      </div>
+       
+            <div class="section">
+      <div class="card">
+      <div class="card-body">
+      <div
+                    class="card-title text-white fs-3 text-center bg-secondary bg-gradient">Returns</div>
+      <table class="returns-table">
+      <thead>
+      <tr>
+      <th hidden="">Sales ID</th>
+      <th>Transaction ID</th>
+      <th>Employee ID</th>
+      <th>Return Amount</th>
+      <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="returnData : ${pendingReturns}">
+      <td hidden="" th:text="${returnData.sales_id}"></td>
+      <td th:text="${returnData.sales_transaction_id}"></td>
+      <td th:text="${returnData.employee_emp_id}"></td>
+      <td th:text="${returnData.sales_amount_return}"></td>
+      <td>
+      <button class="approve-btn"
+                            th:data-sales-id="${returnData.sales_id}"
+                            th:data-is-request-approval="false">
+      <i class="bi bi-check-lg"></i>
+      </button>
+      <button class="reject-btn"
+                            th:data-sales-id="${returnData.sales_id}"
+                            th:data-is-request-approval="false">
+      <i class="bi bi-x-lg"></i>
+      </button>
+      </td>
+      </tr>
+      <tr th:if="${#lists.isEmpty(pendingReturns)}">
+      <td colspan="5" class="no-data">No returns to display.</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
 
-	<tr>
-            <td>Emp1</td>
-            <td>1000</td>
-            <td>1000</td>
-            <td>
-                <button style="background-color: #04AA6D;" class="approval-button">✓ Approve</button>
-                <button style="background-color: #f44336";class="approval-button">✘ Reject</button>
-            </td>
-        </tr>
-	
-
-	<tr>
-            <td>Emp2</td>
-            <td>2000</td>
-            <td>200</td>
-            <td>
-                <button style="background-color: #04AA6D;" class="approval-button">✓ Approve</button>
-                <button style="background-color: #f44336";class="approval-button">✘ Reject</button>
-            </td>
-        </tr>
-
-	<!-- <tr>
-            <td>Emp5</td>
-            <td>2700</td>
-            <td>1000</td>
-            <td>
-                <button style="background-color: #04AA6D;" class="approval-button">✓ Approve</button>
-                <button style="background-color: #f44336";class="approval-button">✘ Reject</button>
-            </td>
-        </tr> -->
-
-
-	
-        <!-- Repeat the following row structure for a total of 10 rows -->
-        <!-- Adjust values as needed -->
-        <!-- <tr> ... </tr> -->
-    </table>
-
-   
-    </div> </div>
+    
 
     <!-- Bootstrap JS and dependencies (optional) -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -249,6 +311,116 @@
       // Load menu.html into the navbar
       $('#navbarSupportedContent').load('navbar.html');
     });
+
+    const approveBtns = document.querySelectorAll('.approve-btn');
+const rejectBtns = document.querySelectorAll('.reject-btn');
+ 
+approveBtns.forEach(btn => {
+	btn.addEventListener('click', () => {
+		const salesId = btn.dataset.salesId;
+		const isRequestApproval = btn.dataset.isRequestApproval === 'true';
+		sendApprovalRequest(salesId, isRequestApproval, 'approved');
+	});
+});
+ 
+rejectBtns.forEach(btn => {
+	btn.addEventListener('click', () => {
+		const salesId = btn.dataset.salesId;
+		const isRequestApproval = btn.dataset.isRequestApproval === 'true';
+		sendApprovalRequest(salesId, isRequestApproval, 'rejected');
+	});
+});
+ 
+function sendApprovalRequest(salesId, isRequestApproval, status) {
+	fetch(`/api/sales-approvals/${salesId}/${isRequestApproval}`, {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({ status })
+	})
+		.then(response => response.json())
+		.then(data => {
+			updateRequestsTable(data.pendingRequests);
+			updateReturnsTable(data.pendingReturns);
+		})
+		.catch(error => console.error(error));
+}
+ 
+function updateRequestsTable(data) {
+	const requestsTableBody = document.querySelector('.requests-table tbody');
+	requestsTableBody.innerHTML = '';
+ 
+	data.forEach(request => {
+		const row = document.createElement('tr');
+		row.innerHTML = `
+<td>${request.sales_transaction_id}</td>
+<td>${request.employee_emp_id}</td>
+<td>${request.sales_amount_request}</td>
+<td>
+<button class="approve-btn" th:data-sales-id="${request.sales_id}" th:data-is-request-approval="true">
+<i class="bi bi-check-lg"></i>
+</button>
+<button class="reject-btn" th:data-sales-id="${request.sales_id}" th:data-is-request-approval="true">
+<i class="bi bi-x-lg"></i>
+</button>
+</td>
+        `;
+		requestsTableBody.appendChild(row);
+	});
+ 
+	addButtonEventListeners();
+}
+ 
+function updateReturnsTable(data) {
+	const returnsTableBody = document.querySelector('.returns-table tbody');
+	returnsTableBody.innerHTML = '';
+ 
+	data.forEach(returnData => {
+		const row = document.createElement('tr');
+		row.innerHTML = `
+<td>${returnData._transaction_id}</td>
+<td>${returnData.employee_emp_id}</td>
+<td>${returnData.sales_amount_return}</td>
+<td>
+<button class="approve-btn"
+					th:data-sales-id="${returnData.sales_id}"
+					th:data-is-request-approval="false">
+<i class="bi bi-check-lg"></i>
+</button>
+<button class="reject-btn"
+					th:data-sales-id="${returnData.sales_id}"
+					th:data-is-request-approval="false">
+<i class="bi bi-x-lg"></i>
+</button>
+</td>
+        `;
+		returnsTableBody.appendChild(row);
+	});
+ 
+	addButtonEventListeners();
+}
+ 
+function addButtonEventListeners() {
+	const approveBtns = document.querySelectorAll('.approve-btn');
+	const rejectBtns = document.querySelectorAll('.reject-btn');
+ 
+	approveBtns.forEach(btn => {
+		btn.addEventListener('click', () => {
+			const salesId = btn.dataset.salesId;
+			const isRequestApproval = btn.dataset.isRequestApproval === 'true';
+			sendApprovalRequest(salesId, isRequestApproval, 'approved');
+		});
+	});
+ 
+	rejectBtns.forEach(btn => {
+		btn.addEventListener('click', () => {
+			const salesId = btn.dataset.salesId;
+			const isRequestApproval = btn.dataset.isRequestApproval === 'true';
+			sendApprovalRequest(salesId, isRequestApproval, 'rejected');
+		});
+	});
+}
   </script>
 
 </body>
